@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	fieldset {
+		 background:lightyellow;
+		 border: 10px solid yellow; 
+		 margin-bottom: 10px;
+		 width: 720px;
+		}
+	label {
+		display: inline-block;;
+		width: 180px;
+		text-align: right;
+		vertical-align: top;
+	}	
+	label input[type=checkbox], label input[type=radio], .widthAuto {
+		width: auto;
+	}
+	textarea {
+		width: 360px;
+		height: 50px;
+	}
+The labels of the checkbox and the radio needs to have width:auto
+For the words on both sides of the two range, you can use any appropriate style e.g. text-align:center
+	</style>
+<title>Dating Web Site Assessment</title>
+</head>
+<body>
+<h2>Please Enter Your Details For Our Dating Website!</h2>
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
+	<fieldset>
+	<legend>Your face</legend>
+	<label for="avatar">Your image: </label><input type="file" name="avatar" id="avatar" required><br>
+	<label for="avatar">Image preview: </label><img id="preview">
+	</fieldset>
+	<fieldset>
+	<legend>Your general data</legend>
+	<label for="name">Name: </label><input id="name" type= "text" placeholder="Enter Your Name" required><br>
+    <label for="gender">Gender:</label><input id="gender" type="radio" name="sex" value="Male" required>  <label class="widthAuto" for="gender">Male </label><input type="radio" name="sex" value="Female"> <label class="widthAuto"  for="gender">Female</label> <br>
+    <label for="age">Age: </label><input type="number" required><br>
+    <label for="DoB">Date of birth: </label><input id="DoB" type="date" ><br>
+    <label for="FC">Favorite color: </label><input id="FC" type="color" ><br>
+    <label for="WC">Which country: </label><select id="WC">
+    	<option></option>
+  		<option value="poland">Poland</option>
+  		<option value="us">United States</option>
+  		<option value="brazil">Brasil</option>
+  		<option value="germany">Germany</option>
+  		<option value="australia">Australia</option>
+  	</select>
+	</fieldset>
+	<fieldset>
+	<legend>Your indicators</legend>
+	<label for="height">Height: </label><label class="widthAuto" for="height">Short</label><input type="range" id="height" min="0" max="100"><label for="height"  class="widthAuto">Tall</label><br>
+	<label for="salary">Salary: </label><label  class="widthAuto" for="salary">Poor</label><input type="range" id="salary" min="0" max="100"><label  class="widthAuto" for="salary">Rich</label><br>
+	</fieldset>
+	<fieldset>
+	<legend>Your Contact information</legend>
+	<label for="email">Email: </label><input type="email" ><br>
+	<label for="mobile">Mobile: </label><input type="tel" ><br>
+	<label for="address">Address: </label><textarea></textarea><br>
+	<label class="widthAuto" for="MtCY">Method to contact you:</label><input type="checkbox" value="Email">Email<input type="checkbox" value="Whatsapp"> Whatsapp<input type="checkbox" value="In-app chat"> In-app chat
+	</fieldset>
+	<input type="submit" value="Submit">
+</form>
+</body>
+</html> 
